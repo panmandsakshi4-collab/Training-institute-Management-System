@@ -1,0 +1,1080 @@
+/* =====================================================
+   SKILLBRIDGE ACADEMY - COURSES PAGE
+   ===================================================== */
+
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #111827;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    height: 75px;
+    margin: auto;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 23px;
+    font-weight: bold;
+
+    color: #22223b;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.logo span {
+    color: #5b4bdb;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #444;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #5b4bdb;
+}
+
+
+/* PROFILE BUTTON */
+
+.profile-btn {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #5b4bdb;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.profile-btn:hover {
+    transform: scale(1.08);
+    background: #4435b5;
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: #5b4bdb;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+
+/* ================= HERO ================= */
+
+.courses-hero {
+    background:
+        linear-gradient(
+            180deg,
+            #eafff9 0%,
+            #ffffff 100%
+        );
+
+    padding: 45px 20px 38px;
+
+    text-align: center;
+}
+
+.hero-inner {
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero-tag {
+    display: inline-block;
+
+    color: #078b68;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+    margin-bottom: 10px;
+}
+
+.courses-hero h1 {
+    font-size: 46px;
+
+    line-height: 1.1;
+
+    margin-bottom: 10px;
+
+    color: #111827;
+}
+
+.courses-hero p {
+    color: #70757d;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+
+/* ================= COURSES SECTION ================= */
+
+.courses-section {
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 38px 30px 60px;
+}
+
+
+/* SECTION HEADER */
+
+.section-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.section-label {
+    display: block;
+
+    color: #078b68;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+
+    margin-bottom: 5px;
+}
+
+.section-top h2 {
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #111827;
+}
+
+
+/* VIEW ALL */
+
+.view-all {
+    border: 1px solid #222;
+
+    background: #ffffff;
+
+    color: #222;
+
+    border-radius: 25px;
+
+    padding: 9px 20px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.view-all:hover {
+    background: #222;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   COURSE GRID
+   4 CARDS IN ONE ROW
+   ===================================================== */
+
+.course-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+
+    width: 100%;
+}
+
+
+/* ================= COURSE CARD ================= */
+
+.course-card {
+    width: 100%;
+
+    min-width: 0;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe2e7;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   COURSE IMAGE
+   ===================================================== */
+
+.course-image {
+    width: 100%;
+
+    height: 175px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =====================================================
+   BACKGROUND IMAGES
+
+   Courses.css is inside css folder.
+   Images are inside images folder.
+
+   Therefore ../images/ is used.
+   ===================================================== */
+
+.java-bg {
+    background-image:
+        url("../images/java-full-stack.jpg");
+}
+
+.python-bg {
+    background-image:
+        url("../images/python-full-stack.jpg");
+}
+
+.cloud-bg {
+    background-image:
+        url("../images/cloud-computing.jpg");
+}
+
+.dsa-bg {
+    background-image:
+        url("../images/dsa-problem-solving.jpg");
+}
+
+
+/* =====================================================
+   IMPORTANT
+
+   Your JPG images already contain:
+   LIVE COURSE
+   Rating
+   Course title
+   Illustration
+
+   So HTML badges are hidden to avoid duplicate badges.
+   ===================================================== */
+
+.course-badge {
+    display: none;
+}
+
+.rating {
+    display: none;
+}
+
+
+/* =====================================================
+   IMAGE CONTENT
+
+   If HTML contains extra image text,
+   hide it because text is already inside JPG.
+   ===================================================== */
+
+.image-content {
+    display: none;
+}
+
+
+/* ================= COURSE CONTENT ================= */
+
+.course-content {
+    min-height: 165px;
+
+    padding:
+        18px
+        17px
+        16px;
+}
+
+.course-content h3 {
+    min-height: 52px;
+
+    margin:
+        0 0 18px;
+
+    font-size: 19px;
+
+    line-height: 1.35;
+
+    font-weight: 600;
+
+    color: #111827;
+}
+
+
+/* LEVEL */
+
+.level {
+    color: #777f89;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= BOTTOM ================= */
+
+.course-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+.interested {
+    color: #777f89;
+
+    font-size: 13px;
+}
+
+.course-bottom a {
+    color: #12815e;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.course-bottom a:hover {
+    color: #096d4e;
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   WHY SKILLBRIDGE SECTION
+   ===================================================== */
+
+.why-section {
+    background: #f7f8fc;
+
+    padding:
+        60px
+        25px;
+}
+
+.why-heading {
+    max-width: 750px;
+
+    margin:
+        0 auto
+        35px;
+
+    text-align: center;
+}
+
+.why-heading .section-label {
+    margin-bottom: 8px;
+}
+
+.why-heading h2 {
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+    color: #111827;
+}
+
+.why-heading p {
+    color: #727783;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* WHY CARDS */
+
+.why-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.why-card {
+    background: #ffffff;
+
+    border:
+        1px solid #e3e5eb;
+
+    border-radius: 13px;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 22px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* WHY ICON */
+
+.why-icon {
+    width: 48px;
+    height: 48px;
+
+    margin:
+        0 auto
+        15px;
+
+    border-radius: 12px;
+
+    background: #f0edff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.why-card h3 {
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #777d87;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   CTA SECTION
+   ===================================================== */
+
+.course-cta {
+    max-width: 1200px;
+
+    margin:
+        55px auto;
+
+    padding:
+        38px 45px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b4bdb,
+            #7668e8
+        );
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.cta-label {
+    display: block;
+
+    color: #ddd9ff;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 8px;
+}
+
+.course-cta h2 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.course-cta p {
+    color: #e5e3ff;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* CTA BUTTON */
+
+.cta-button {
+    flex-shrink: 0;
+
+    background: #ffffff;
+
+    color: #5142c7;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    padding:
+        12px 23px;
+
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.footer {
+    background: #17172b;
+
+    color: #ffffff;
+}
+
+
+/* FOOTER CONTAINER */
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding:
+        48px
+        25px
+        35px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1.4fr;
+
+    gap: 40px;
+}
+
+
+/* FOOTER LOGO */
+
+.footer-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    width: 43px;
+    height: 43px;
+
+    object-fit: contain;
+}
+
+.footer-logo h2 {
+    font-size: 20px;
+}
+
+.footer-logo span {
+    color: #8b7cf6;
+}
+
+
+/* FOOTER ABOUT */
+
+.footer-about > p {
+    max-width: 330px;
+
+    color: #b9bac7;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* FOOTER HEADINGS */
+
+.footer-column h3 {
+    font-size: 17px;
+
+    margin-bottom: 17px;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-column a,
+.footer-column p {
+    display: block;
+
+    color: #b9bac7;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    margin-bottom: 11px;
+
+    line-height: 1.5;
+}
+
+.footer-column a:hover {
+    color: #8b7cf6;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    border-top:
+        1px solid #303047;
+
+    text-align: center;
+
+    padding:
+        17px 15px;
+}
+
+.footer-bottom p {
+    color: #999aaa;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 1100px) {
+
+    .course-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .why-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        height: 70px;
+
+        padding:
+            0 20px;
+
+        position: relative;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profile-btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    /* MOBILE NAV */
+
+    .nav-links {
+        display: none !important;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #ffffff;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 10px 0;
+
+        box-shadow:
+            0 8px 20px
+            rgba(0, 0, 0, 0.12);
+
+        z-index: 9999;
+    }
+
+    .nav-links.show {
+        display: flex !important;
+    }
+
+    .nav-links li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+
+        width: 100%;
+
+        padding:
+            15px 20px;
+
+        font-size: 16px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        background: #f5f3ff;
+
+        color: #5b4bdb;
+    }
+
+
+    /* HERO */
+
+    .courses-hero {
+        padding:
+            35px
+            15px
+            30px;
+    }
+
+    .courses-hero h1 {
+        font-size: 32px;
+    }
+
+    .courses-hero p {
+        font-size: 14px;
+    }
+
+
+    /* COURSES */
+
+    .courses-section {
+        padding:
+            30px
+            15px
+            50px;
+    }
+
+    .section-top h2 {
+        font-size: 28px;
+    }
+
+    .view-all {
+        font-size: 14px;
+
+        padding:
+            8px 15px;
+    }
+
+
+    /* ONE CARD PER ROW */
+
+    .course-grid {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+    .course-image {
+        height: 205px;
+    }
+
+    .course-content {
+        min-height: 175px;
+    }
+
+
+    /* WHY */
+
+    .why-section {
+        padding:
+            50px
+            15px;
+    }
+
+    .why-heading h2 {
+        font-size: 27px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    /* CTA */
+
+    .course-cta {
+        margin:
+            35px 15px;
+
+        padding:
+            30px 22px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .course-cta h2 {
+        font-size: 25px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        padding:
+            40px 22px
+            30px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 420px) {
+
+    .courses-hero h1 {
+        font-size: 28px;
+    }
+
+    .course-image {
+        height: 190px;
+    }
+
+    .course-content {
+        padding:
+            17px 15px;
+    }
+
+    .course-content h3 {
+        font-size: 18px;
+    }
+
+    .course-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .view-all {
+        padding:
+            8px 14px;
+
+        font-size: 14px;
+    }
+}
