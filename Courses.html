@@ -1,54 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/Courses.css">
+    <div id="navbar"></div>
 
-    <title>Courses - Skill Bridge Academy</title>
-
-    <link rel="stylesheet" href="/css/Courses.css">
-</head>
-
-<body>
-
-<!-- ================= NAVBAR ================= -->
-
-<header>
-    <nav class="navbar">
-
-        <div class="logo">
-            <img src="images/logo.png" alt="SkillBridge Academy Logo">
-            <span>Skill</span> Bridge Academy
-        </div>
-
-        <ul class="nav-links" id="navLinks">
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="Courses.html" class="active">Courses</a></li>
-            <li><a href="#Trainer">Trainer</a></li>
-            <li><a href="Fees.html">Fees</a></li>
-            <li><a href="#Test">Test</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <button class="theme-toggle"
-                id="themeButton"
-                onclick="toggleTheme()"
-                title="Night Mode">
-            🌙
-        </button>
-
-        <a href="#" class="profile-btn" title="Profile">
-            👤
-        </a>
-
-        <button class="menu-toggle"
-                id="menuButton"
-                onclick="toggleMenu()">
-            ☰
-        </button>
-
-    </nav>
-</header>
 
 
 <!-- ================= COURSES ================= -->
@@ -479,6 +431,13 @@
 
 <script>
 
+ 
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+        });
+   
 function toggleMenu() {
 
     const navLinks = document.getElementById("navLinks");
