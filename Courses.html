@@ -3,201 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillBridge Academy - Courses</title>
-    <link rel="stylesheet" href="css/Courses.css">
+
+    <title>Courses - Skill Bridge Academy</title>
+
+    <link rel="stylesheet" href="/css/Courses.css">
 </head>
 
 <body>
+
+<!-- ================= NAVBAR ================= -->
 
 <header>
     <nav class="navbar">
 
         <div class="logo">
             <img src="images/logo.png" alt="SkillBridge Academy Logo">
-            <span>Skill</span>Bridge Academy
+            <span>Skill</span> Bridge Academy
         </div>
 
         <ul class="nav-links" id="navLinks">
             <li><a href="Home.html">Home</a></li>
             <li><a href="Courses.html" class="active">Courses</a></li>
             <li><a href="#Trainer">Trainer</a></li>
-            <li><a href="#Fees">Fees</a></li>
+            <li><a href="Fees.html">Fees</a></li>
             <li><a href="#Test">Test</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <a href="#" class="profile-btn" title="Profile">👤</a>
+        <button class="theme-toggle"
+                id="themeButton"
+                onclick="toggleTheme()"
+                title="Night Mode">
+            🌙
+        </button>
 
-        <button class="menu-toggle" id="menuButton" onclick="toggleMenu()">☰</button>
+        <a href="#" class="profile-btn" title="Profile">
+            👤
+        </a>
+
+        <button class="menu-toggle"
+                id="menuButton"
+                onclick="toggleMenu()">
+            ☰
+        </button>
 
     </nav>
 </header>
 
 
-<!-- HERO -->
-
-<section class="courses-hero">
-    <div class="hero-inner">
-        <span class="hero-tag">SKILLBRIDGE ACADEMY</span>
-        <h1>Start Your Learning Today!</h1>
-        <p>Learn practical skills, build real projects and prepare for your IT career.</p>
-    </div>
-</section>
-
-
-<!-- COURSES -->
+<!-- ================= COURSES ================= -->
 
 <section class="courses-section">
 
-    <div class="section-top">
-        <div>
-            <span class="section-label">LEARN • PRACTICE • GROW</span>
-            <h2>Our Courses</h2>
-        </div>
+    <div class="section-heading">
+        <p>OUR COURSES</p>
 
-        <button class="view-all">View All</button>
+        <h1>
+            Learn Skills That
+            <span>Build Your Career</span>
+        </h1>
+
+        <p class="section-description">
+            Choose from our industry-oriented courses designed
+            with practical training and real-world projects.
+        </p>
     </div>
 
 
     <div class="course-grid">
 
-        <!-- JAVA -->
-        <article class="course-card">
-           <div class="course-image java-bg">
-                <span class="course-badge">▣ LIVE COURSE</span>
-                <span class="rating">⭐ 4.9</span>
 
-                <div class="image-content">
-                    <h3>JAVA<br>FULL STACK</h3>
-                    <p>Spring Boot • SQL • React</p>
-                </div>
-            </div>
+        <!-- JAVA FULL STACK -->
+
+        <div class="course-card">
+
+            <div class="course-image java-bg"></div>
 
             <div class="course-content">
-                <h3>Java Full Stack Development Course</h3>
 
-                <p class="level">◉ Beginner to Advanced</p>
+                <h3>
+                    Java Full Stack Development Course
+                </h3>
+
+                <div class="course-info">
+                    <span>◉ Beginner to Advanced</span>
+                    <span>6 Months</span>
+                </div>
+
+                <div class="price-section">
+
+                    <span class="offer-price">
+                        ₹40,000
+                    </span>
+
+                    <span class="original-price">
+                        ₹50,000
+                    </span>
+
+                    <span class="discount">
+                        20% OFF
+                    </span>
+
+                </div>
 
                 <div class="course-bottom">
-                    <span class="interested">↗ Practical Projects</span>
-                    <a href="JavaFullStack.html">Explore now</a>
+
+                    <span class="interested">
+                        ↗ Practical Projects
+                    </span>
+
+                    <a href="/course/java-fullStack.html">
+                        Explore Now
+                    </a>
+
                 </div>
+
             </div>
-        </article>
+
+        </div>
 
 
-        <!-- PYTHON -->
-        <article class="course-card">
-           <div class="course-image python-bg">
-                <span class="course-badge">▣ LIVE COURSE</span>
-                <span class="rating">⭐ 4.8</span>
+        <!-- PYTHON FULL STACK -->
 
-                <div class="image-content">
-                    <h3>PYTHON<br>FULL STACK</h3>
-                    <p>Django • SQL • React</p>
-                </div>
-            </div>
+        <div class="course-card">
+
+            <div class="course-image python-bg"></div>
 
             <div class="course-content">
-                <h3>Python Full Stack Development Course</h3>
 
-                <p class="level">◉ Beginner to Advanced</p>
+                <h3>
+                    Python Full Stack Development Course
+                </h3>
+
+                <div class="course-info">
+                    <span>◉ Beginner to Advanced</span>
+                    <span>6 Months</span>
+                </div>
+
+                <div class="price-section">
+
+                    <span class="offer-price">
+                        ₹40,000
+                    </span>
+
+                    <span class="original-price">
+                        ₹50,000
+                    </span>
+
+                    <span class="discount">
+                        20% OFF
+                    </span>
+
+                </div>
 
                 <div class="course-bottom">
-                    <span class="interested">↗ Practical Projects</span>
-                    <a href="#">Explore now</a>
+
+                    <span class="interested">
+                        ↗ Practical Projects
+                    </span>
+
+                    <a href="/course/Python-fullStack.html">
+                        Explore Now
+                    </a>
+
                 </div>
+
             </div>
-        </article>
+
+        </div>
 
 
-        <!-- CLOUD -->
-        <article class="course-card">
-            <div class="course-image cloud-bg">
-                <span class="course-badge">▣ LIVE COURSE</span>
-                <span class="rating">⭐ 4.8</span>
+        <!-- CLOUD COMPUTING -->
 
-                <div class="image-content">
-                    <h3>CLOUD<br>COMPUTING</h3>
-                    <p>AWS • Azure • Docker • DevOps</p>
-                </div>
-            </div>
+        <div class="course-card">
+
+            <div class="course-image cloud-bg"></div>
 
             <div class="course-content">
-                <h3>Cloud Computing &amp; DevOps Course</h3>
 
-                <p class="level">◉ Beginner to Advanced</p>
+                <h3>
+                    Cloud Computing & DevOps Course
+                </h3>
+
+                <div class="course-info">
+                    <span>◉ Beginner to Advanced</span>
+                    <span>6 Months</span>
+                </div>
+
+                <div class="price-section">
+
+                    <span class="offer-price">
+                        ₹35,000
+                    </span>
+
+                    <span class="original-price">
+                        ₹45,000
+                    </span>
+
+                    <span class="discount">
+                        22% OFF
+                    </span>
+
+                </div>
 
                 <div class="course-bottom">
-                    <span class="interested">↗ Hands-on Labs</span>
-                    <a href="#">Explore now</a>
+
+                    <span class="interested">
+                        ↗ Hands-on Labs
+                    </span>
+
+                    <a href="/course/cloud-computing.html">
+                        Explore Now
+                    </a>
+
                 </div>
+
             </div>
-        </article>
+
+        </div>
 
 
         <!-- DSA -->
-        <article class="course-card">
-           <div class="course-image dsa-bg">
-                <span class="course-badge">▣ LIVE COURSE</span>
-                <span class="rating">⭐ 4.9</span>
 
-                <div class="image-content">
-                    <h3>DSA &amp;<br>PROBLEM<br>SOLVING</h3>
-                    <p>Arrays • Trees • Graphs • Algorithms</p>
-                </div>
-            </div>
+        <div class="course-card">
+
+            <div class="course-image dsa-bg"></div>
 
             <div class="course-content">
-                <h3>DSA &amp; Problem Solving Course</h3>
 
-                <p class="level">◉ Beginner to Advanced</p>
+                <h3>
+                    DSA & Problem Solving Course
+                </h3>
+
+                <div class="course-info">
+                    <span>◉ Beginner to Advanced</span>
+                    <span>4 Months</span>
+                </div>
+
+                <div class="price-section">
+
+                    <span class="offer-price">
+                        ₹25,000
+                    </span>
+
+                    <span class="original-price">
+                        ₹30,000
+                    </span>
+
+                    <span class="discount">
+                        17% OFF
+                    </span>
+
+                </div>
 
                 <div class="course-bottom">
-                    <span class="interested">↗ Coding Practice</span>
-                    <a href="#">Explore now</a>
+
+                    <span class="interested">
+                        ↗ Coding Practice
+                    </span>
+
+                    <a href="/course/DSA.html">
+                        Explore Now
+                    </a>
+
                 </div>
+
             </div>
-        </article>
+
+        </div>
+
+
+        <!-- DATA ANALYTICS -->
+
+        <div class="course-card">
+
+            <div class="course-image analytics-bg"></div>
+
+            <div class="course-content">
+
+                <h3>
+                    Data Analytics Course
+                </h3>
+
+                <div class="course-info">
+                    <span>◉ Beginner to Advanced</span>
+                    <span>6 Months</span>
+                </div>
+
+                <div class="price-section">
+
+                    <span class="offer-price">
+                        ₹35,000
+                    </span>
+
+                    <span class="original-price">
+                        ₹45,000
+                    </span>
+
+                    <span class="discount">
+                        22% OFF
+                    </span>
+
+                </div>
+
+                <div class="course-bottom">
+
+                    <span class="interested">
+                        ↗ Practical Projects
+                    </span>
+
+                    <a href="/course/data-analytics.html">
+                        Explore Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- DATA SCIENCE -->
+
+        <div class="course-card">
+
+            <div class="course-image data-science-bg"></div>
+
+            <div class="course-content">
+
+                <h3>
+                    Data Science & Machine Learning Course
+                </h3>
+
+                <div class="course-info">
+                    <span>◉ Beginner to Advanced</span>
+                    <span>6 Months</span>
+                </div>
+
+                <div class="price-section">
+
+                    <span class="offer-price">
+                        ₹45,000
+                    </span>
+
+                    <span class="original-price">
+                        ₹55,000
+                    </span>
+
+                    <span class="discount">
+                        18% OFF
+                    </span>
+
+                </div>
+
+                <div class="course-bottom">
+
+                    <span class="interested">
+                        ↗ AI & ML Projects
+                    </span>
+
+                    <a href="/course/Data-science.html">
+                        Explore Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
+
 </section>
 
 
-<!-- BEFORE FOOTER -->
+<!-- ================= WHY SKILLBRIDGE ================= -->
 
 <section class="why-section">
 
-    <div class="why-heading">
-        <span class="section-label">WHY SKILLBRIDGE?</span>
-        <h2>Learn Skills That Build Your Career</h2>
-        <p>Our training focuses on practical learning, projects and interview preparation.</p>
-    </div>
+    <p class="section-title">
+        WHY SKILL BRIDGE?
+    </p>
+
+    <h2>
+        Learn Today. Build Your
+        <span>Career Tomorrow.</span>
+    </h2>
 
     <div class="why-grid">
 
         <div class="why-card">
-            <div class="why-icon">💻</div>
-            <h3>Practical Learning</h3>
-            <p>Learn concepts through coding practice and real-world examples.</p>
+            <span>💻</span>
+            <h3>Practical Training</h3>
+            <p>Learn through hands-on practical sessions.</p>
         </div>
 
         <div class="why-card">
-            <div class="why-icon">🚀</div>
-            <h3>Live Projects</h3>
-            <p>Build projects that help you understand real development workflows.</p>
+            <span>🚀</span>
+            <h3>Real Projects</h3>
+            <p>Work on industry-oriented real-world projects.</p>
         </div>
 
         <div class="why-card">
-            <div class="why-icon">🎯</div>
-            <h3>Interview Preparation</h3>
-            <p>Aptitude, coding practice, mock interviews and career guidance.</p>
+            <span>🎯</span>
+            <h3>Career Preparation</h3>
+            <p>Aptitude, technical and interview preparation.</p>
         </div>
 
         <div class="why-card">
-            <div class="why-icon">🏆</div>
-            <h3>Career Support</h3>
-            <p>Resume guidance and placement assistance to support your career journey.</p>
+            <span>🏆</span>
+            <h3>Certification</h3>
+            <p>Get a certificate after successful completion.</p>
         </div>
 
     </div>
@@ -205,79 +421,64 @@
 </section>
 
 
-<!-- CTA -->
+<!-- ================= CTA ================= -->
 
 <section class="course-cta">
 
-    <div>
-        <span class="cta-label">READY TO START?</span>
-        <h2>Build Your Skills. Build Your Future.</h2>
-        <p>Choose your course and start your learning journey with SkillBridge Academy.</p>
-    </div>
+    <h2>
+        Ready to Start Your Learning Journey?
+    </h2>
 
-    <a href="#contact" class="cta-button">Get Started</a>
+    <p>
+        Choose your course and take the first step toward your career.
+    </p>
+
+    <a href="Fees.html">
+        Register Now
+    </a>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
-<footer class="footer" id="contact">
+<footer id="contact">
 
-    <div class="footer-container">
+    <div class="footer-content">
 
-        <div class="footer-about">
-
-            <div class="footer-logo">
-                <img src="images/logo.png" alt="SkillBridge Academy Logo">
-                <h2><span>Skill</span>Bridge Academy</h2>
-            </div>
-
+        <div>
+            <h2>Skill Bridge Academy</h2>
             <p>
-                Learn practical IT skills, build projects and
-                prepare for a successful technology career.
+                Practical & Industry-Oriented Training
             </p>
-
         </div>
 
-
-        <div class="footer-column">
+        <div>
             <h3>Quick Links</h3>
             <a href="Home.html">Home</a>
             <a href="Courses.html">Courses</a>
-            <a href="#Trainer">Trainer</a>
-            <a href="#Fees">Fees</a>
-            <a href="#Test">Test</a>
+            <a href="Fees.html">Fees</a>
         </div>
 
-
-        <div class="footer-column">
-            <h3>Courses</h3>
-            <a href="JavaFullStack.html">Java Full Stack</a>
-            <a href="#">Python Full Stack</a>
-            <a href="#">Cloud Computing</a>
-            <a href="#">DSA &amp; Problem Solving</a>
-        </div>
-
-
-        <div class="footer-column">
-            <h3>Contact Us</h3>
-            <p>📍 Pune, Maharashtra</p>
+        <div>
+            <h3>Contact</h3>
+            <p>📧 skillbridgeacademy@gmail.com</p>
             <p>📞 +91 98765 43210</p>
-            <p>✉️ skillbridgeacademy@gmail.com</p>
         </div>
 
     </div>
 
-
     <div class="footer-bottom">
-        <p>© 2026 SkillBridge Academy. All Rights Reserved.</p>
+        © 2026 Skill Bridge Academy. All Rights Reserved.
     </div>
 
 </footer>
 
 
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
+
 function toggleMenu() {
 
     const navLinks = document.getElementById("navLinks");
@@ -290,7 +491,52 @@ function toggleMenu() {
     } else {
         menuButton.innerHTML = "☰";
     }
+
 }
+
+
+function toggleTheme() {
+
+    const body = document.body;
+    const themeButton = document.getElementById("themeButton");
+
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+
+        themeButton.innerHTML = "☀️";
+        themeButton.title = "Day Mode";
+
+        localStorage.setItem("theme", "dark");
+
+    } else {
+
+        themeButton.innerHTML = "🌙";
+        themeButton.title = "Night Mode";
+
+        localStorage.setItem("theme", "light");
+
+    }
+
+}
+
+
+window.addEventListener("DOMContentLoaded", function () {
+
+    const theme = localStorage.getItem("theme");
+    const themeButton = document.getElementById("themeButton");
+
+    if (theme === "dark") {
+
+        document.body.classList.add("dark-mode");
+
+        themeButton.innerHTML = "☀️";
+        themeButton.title = "Day Mode";
+
+    }
+
+});
+
 </script>
 
 </body>
